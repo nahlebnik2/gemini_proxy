@@ -4,6 +4,7 @@ function FindProxyForURL(url, host) {
         shExpMatch(host, "*gemini.google.com") || 
         shExpMatch(host, "*googleusercontent.com") ||
         shExpMatch(host, "*googleusercontent.com") ||
+        shExpMatch(host, "*deepl.com") ||
         shExpMatch(host, "*ggpht.com")) {
         return "SOCKS 64.188.95.84:10808; DIRECT";
     }
