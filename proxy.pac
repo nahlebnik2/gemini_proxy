@@ -1,12 +1,7 @@
 function FindProxyForURL(url, host) {
-    if (shExpMatch(host, "*google.com") || 
-        shExpMatch(host, "*gstatic.com") || 
-        shExpMatch(host, "*gemini.google.com") || 
-        shExpMatch(host, "*googleusercontent.com") ||
-        shExpMatch(host, "*googleusercontent.com") ||
-        shExpMatch(host, "*deepl.com") ||
-        shExpMatch(host, "*ggpht.com")) {
-        return "SOCKS 64.188.95.84:10808; DIRECT";
+    if (shExpMatch(host, "*gemini.google.com") || 
+        shExpMatch(host, "*deepl.com")) {
+        return "PROXY 167.99.144.185:3128; PROXY 45.32.1.83:9000; PROXY 138.68.3.159:3128; DIRECT";
     }
     return "DIRECT";
 }
